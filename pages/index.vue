@@ -3,6 +3,8 @@
     <!-- Hero section -->
     <LandingHero />
     <LandingRemoteSensing />
+    <LandingDocumentation />
+    <LandingOurTeam />
   </div>
 </template>
 
