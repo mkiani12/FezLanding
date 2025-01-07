@@ -8,7 +8,7 @@
         <div class="lg:grid lg:grid-cols-12 gap-x-16 py-10">
           <div class="lg:col-span-6 max-w-full mb-5 lg:mb-0">
             <ToolsBeforeAfterSlider
-              class="rounded-xl overflow-hidden"
+              class="rounded-2xl overflow-hidden"
               :model-value="50"
               :step="0.1"
               :before-image="beforeImage"

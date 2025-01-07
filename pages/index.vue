@@ -5,6 +5,7 @@
     <LandingRemoteSensing />
     <LandingDocumentation />
     <LandingOurTeam />
+    <LandingContactUs />
   </div>
 </template>
 

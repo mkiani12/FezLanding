@@ -1,5 +1,5 @@
 <template>
-  <section id="remote-sensing" class="w-full lg:pb-24 bg-[#FAFAFA]">
+  <section id="remote-sensing" class="w-full pb-16 lg:pb-24 bg-[#FAFAFA]">
     <BaseSection class="lg:max-w-[1200px]">
       <div class="col-span-12 text-black text-center lg:pt-24 lg:pb-22 pt-20">
         <h1 class="lg:text-5xl text-3xl font-bold mb-8 uppercase">
