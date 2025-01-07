@@ -6,6 +6,7 @@
     <LandingDocumentation />
     <LandingOurTeam />
     <LandingContactUs />
+    <LandingCollaborations />
   </div>
 </template>
 
