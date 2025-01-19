@@ -45,8 +45,8 @@
           <div
             class="lg:col-span-2 text-center mb-5 lg:mb-0 flex flex-col justify-center"
           >
-            <img class="max-h-28 mb-4" :src="AzadSVG" alt="Azad Univercity" />
-            <div>Azad Univercity</div>
+            <img class="max-h-28 mb-4" :src="SafaSVG" alt="Azad Univercity" />
+            <div>Safa Mine I.T. Co.</div>
           </div>
         </div>
       </div>
@@ -55,6 +55,7 @@
 </template>
 
 <script setup lang="ts">
+import SafaSVG from "~/assets/img/collabs/Safa.svg";
 import AzadSVG from "~/assets/img/collabs/Azad.svg";
 import ShamsipourSVG from "~/assets/img/collabs/Shamsipour.svg";
 import KharazmiSVG from "~/assets/img/collabs/Kharazmi.svg";

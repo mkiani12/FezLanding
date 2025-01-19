@@ -6,30 +6,37 @@
         <div
           class="w-full lg:flex lg:flex-row lg:flex-wrap lg:justify-center py-10"
         >
-          <div
+          <a
             v-for="(member, index) in teamMembers"
             :key="index"
-            class="lg:basis1/5 lg:max-w-[20%] p-4 pb-0 relative"
+            :href="member.link"
+            class="lg:basis1/5 lg:max-w-[20%]"
+            :target="member.link.length > 2 ? '_blank' : ''"
           >
-            <div :class="[index % 2 == 0 ? 'bg-[#72B01D]' : 'bg-[#EBEBEB]']">
-              <img class="w-full" :src="member.imageUrl" :alt="member.name" />
-            </div>
-            <div
-              class="absolute bg-white bottom-5 left-0 right-0 mx-7 rounded text-left px-2 max-h-[48px] hover:max-h-full transition-all duration-300 ease-in-out overflow-hidden"
-            >
-              <div>
-                {{ member.name }}
+            <div class="p-4 pb-0 relative">
+              <div :class="[index % 2 == 0 ? 'bg-[#72B01D]' : 'bg-[#EBEBEB]']">
+                <img class="w-full" :src="member.imageUrl" :alt="member.name" />
               </div>
-              <div class="truncate hover:whitespace-normal opacity-50">
-                {{ member.position }}
+              <div
+                class="absolute bg-white bottom-2 left-0 right-0 mx-7 rounded text-left px-2 max-h-[48px] hover:max-h-full transition-all duration-300 ease-in-out overflow-hidden"
+              >
+                <div>
+                  {{ member.name }}
+                </div>
+                <div class="lg:truncate hover:whitespace-normal opacity-50">
+                  {{ member.position }}
+                </div>
               </div>
             </div>
-          </div>
+          </a>
         </div>
         <p class="mb-8">
           After about a year with the cooperation of the FEZ team, the first
           tool is now available. <br />
-          <a href="#" class="text-[#72B01D] border-b border-[#72B01D]">
+          <a
+            href="https://www.linkedin.com/company/feztool"
+            class="text-[#72B01D] border-b border-[#72B01D]"
+          >
             Discover more about us
           </a>
         </p>
@@ -45,53 +52,64 @@ import MahdiImage from "~/assets/img/team/mahdi-nedaei.png";
 import YoonesImage from "~/assets/img/team/yoones-kiani.png";
 import ParsaImage from "~/assets/img/team/parsa-elmi.png";
 import MohammadHImage from "~/assets/img/team/mohammad-h-kiani.png";
+import ErfanImage from "~/assets/img/team/erfan-karimzadeh.png";
+import HoomanImage from "~/assets/img/team/hooman-mirzaei.png";
 
 interface TeamMember {
   name: string;
   position: string;
   imageUrl: string;
+  link: string;
 }
 
 const teamMembers = ref<TeamMember[]>([
   {
     name: "Arad Farahani",
-    position: "Founder, Researcher",
+    position: "Founder, Researcher, Back-end developer",
     imageUrl: AradImage,
+    link: "https://www.linkedin.com/in/aradfarahani/",
   },
   {
     name: "Mohammad Kiani",
     position: "Co-founder, Team lead, FullStack developer",
     imageUrl: MohammadImage,
+    link: "https://www.linkedin.com/in/mohmmdkiani/",
   },
   {
     name: "Mahdi Nedaei",
     position: "Back-end developer",
     imageUrl: MahdiImage,
+    link: "https://www.linkedin.com/in/mahdi-nedaee-232168242/",
   },
   {
     name: "Hooman Mirzaei",
     position: "Back-end developer",
-    imageUrl: ParsaImage,
+    imageUrl: HoomanImage,
+    link: "https://www.linkedin.com/in/hooman-mirzaee/",
   },
   {
     name: "Yoones Kiani",
-    position: "",
+    position: "Designer",
     imageUrl: YoonesImage,
+    link: "#",
   },
   {
     name: "Parsa Elmi",
-    position: "",
+    position: "HR manager",
     imageUrl: ParsaImage,
+    link: "https://www.linkedin.com/in/elmiparsa/",
   },
   {
     name: "Erfan Karimzadeh",
-    position: "",
-    imageUrl: ParsaImage,
+    position: "Front-end developer",
+    imageUrl: ErfanImage,
+    link: "https://www.linkedin.com/in/erfan-karimzadeh/",
   },
   {
     name: "Mohammad Kiani",
     position: "Designer",
     imageUrl: MohammadHImage,
+    link: "https://www.linkedin.com/in/mh-kiani/",
   },
   // {
   //   name: "AmirAli Abdoli",

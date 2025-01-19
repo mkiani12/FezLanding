@@ -9,17 +9,45 @@
           <span class="text-[#72B01D]"> Free and Easy </span> is not just a
           slogan. <br />
           The resources of some tools are publicly available on
-          <a href="#" class="text-[#72B01D]">Github</a> and
-          <a href="#" class="text-[#72B01D]">Researchgate</a> and you can easily
+          <a
+            href="https://github.com/aradfarahani/Remote-Sensing"
+            target="_blank"
+            class="text-[#72B01D]"
+          >
+            Github
+          </a>
+          and
+          <a
+            href="https://www.researchgate.net/profile/Mahdi-Farmahini-Farahani"
+            target="_blank"
+            class="text-[#72B01D]"
+          >
+            Researchgate
+          </a>
+          and you can easily
           <br />
           use them.
         </p>
-        <a href="#">
+        <a
+          href="https://github.com/aradfarahani/Remote-Sensing"
+          target="_blank"
+        >
+          <base-button
+            class="px-6 py-3 mr-3 bg-black text-white font-bold inline-flex items-center"
+          >
+            <GithubIcon class="mr-3 text-xl" />
+            Github
+          </base-button>
+        </a>
+        <a
+          href="https://www.researchgate.net/profile/Mahdi-Farmahini-Farahani"
+          target="_blank"
+        >
           <base-button
             class="px-6 py-3 bg-black text-white font-bold inline-flex items-center"
           >
-            <GithubIcon class="mr-3 text-xl" />
-            Github Research Gate
+            <ResearchGateIcon class="mr-3 text-xl" />
+            Research Gate
           </base-button>
         </a>
       </div>
@@ -29,6 +57,7 @@
 
 <script setup lang="ts">
 import GithubIcon from "~icons/mdi/github";
+import ResearchGateIcon from "~icons/simple-icons/researchgate";
 </script>
 
 <style scoped></style>

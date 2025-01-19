@@ -1,6 +1,6 @@
 <template>
   <footer class="max-w-screen-2xl px-8 mx-auto z-10 relative">
-    <!-- <div class="w-full border-y border-[#DDDDDD]">
+    <div class="w-full border-y border-[#DDDDDD]">
       <div
         class="grid xl:grid-cols-4 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1"
       >
@@ -10,42 +10,102 @@
           <div class="sm:hidden xl:block mb-6 sm:mb-0">
             <a href="#">
               <img
-                src="~/assets/img/logo/logo.svg"
+                src="~/assets/img/logo/logo-black.svg"
                 class="w-24 -mt-2"
                 alt="Nefa Logo"
               />
             </a>
           </div>
           <ul class="space-y-4 flex flex-col">
-            <NuxtLink title="Cryptocurrency" url="#">Cryptocurrency</NuxtLink>
-            <NuxtLink title="Exchanges" url="#">Exchanges</NuxtLink>
-            <NuxtLink title="Watchlist" url="#">Watchlist</NuxtLink>
-            <NuxtLink title="Portfolio" url="#">Portfolio</NuxtLink>
-            <NuxtLink title="NFT" url="#">NFT</NuxtLink>
+            <div class="text-xl">Social media</div>
+            <a
+              class="inline-flex items-center"
+              title="LinkedIn"
+              href="https://www.linkedin.com/company/feztool"
+              target="_blank"
+            >
+              <LinkedinIcon class="mr-2" />
+              Linkedin
+            </a>
+            <a
+              class="inline-flex items-center"
+              title="Instagram"
+              href="https://www.instagram.com/fez.tool?igsh=MXV2ZXpucWE4a2Zzdw=="
+              target="_blank"
+            >
+              <InstagramIcon class="mr-2" />
+              Instagram
+            </a>
+            <a
+              class="inline-flex items-center"
+              title="Telegram"
+              href="https://t.me/FEZtool"
+              target="_blank"
+            >
+              <TelegramIcon class="mr-2" />
+              Telegram
+            </a>
           </ul>
         </div>
         <div
           class="md:w-full lg:w-full lg:border-r w-full sm:w-1/2 xl:w-fit sm:px-16 py-6 sm:py-12 border-t sm:border-t xl:border-r border-[#DDDDDD]"
         >
           <ul class="space-y-4 flex flex-col">
-            <NuxtLink title="Products" url="#">Products</NuxtLink>
-            <NuxtLink title="About Us" url="#">About Us</NuxtLink>
-            <NuxtLink title="Careers" url="#">Careers</NuxtLink>
-            <NuxtLink title="Blog" url="#">Blog</NuxtLink>
-            <NuxtLink title="Security" url="#">Security</NuxtLink>
+            <div class="text-xl">Documents</div>
+
+            <a
+              class="inline-flex items-center"
+              title="Github"
+              href="https://github.com/aradfarahani/Remote-Sensing"
+              target="_blank"
+            >
+              <GithubIcon class="mr-2" />
+              Github
+            </a>
+            <a
+              class="inline-flex items-center"
+              title="ResearchGate"
+              href="https://www.researchgate.net/profile/Mahdi-Farmahini-Farahani"
+              target="_blank"
+            >
+              <ResearchGateIcon class="mr-2" />
+              Research Gate
+            </a>
           </ul>
         </div>
         <div
           class="md:w-full md:border-t lg:w-full w-full sm:w-1/2 xl:w-fit sm:px-16 py-6 sm:py-12 border-t sm:border-t-0 sm:border-r-0 border-[#DDDDDD]"
         >
           <ul class="space-y-4 flex flex-col">
-            <NuxtLink title="Help Center" url="#">Help Center</NuxtLink>
-            <NuxtLink title="Contact Us" url="#">Contact Us</NuxtLink>
-            <NuxtLink title="System Status" url="#">System Status</NuxtLink>
-            <NuxtLink title="Area of Avaibility" url="#">
-              Area of Avaibility
-            </NuxtLink>
-            <NuxtLink title="Privacy Policy" url="#">Privacy Policy</NuxtLink>
+            <div class="text-xl">Help Center</div>
+
+            <a
+              class="inline-flex items-center"
+              title="Github"
+              href="https://github.com/aradfarahani/Remote-Sensing"
+              target="_blank"
+            >
+              <GithubIcon class="mr-2" />
+              Github
+            </a>
+            <a
+              class="inline-flex items-center"
+              title="Github"
+              href="https://github.com/aradfarahani/Remote-Sensing"
+              target="_blank"
+            >
+              <GithubIcon class="mr-2" />
+              Github
+            </a>
+            <a
+              class="inline-flex items-center"
+              title="Github"
+              href="https://github.com/aradfarahani/Remote-Sensing"
+              target="_blank"
+            >
+              <GithubIcon class="mr-2" />
+              Github
+            </a>
           </ul>
         </div>
         <div
@@ -59,8 +119,8 @@
           <p
             class="text-sm text-[#666666] focus:outline-none focus:shadow-outline"
           >
-            Never miss anything crypto when <br class="sm:hidden" />you're on
-            the go
+            Never miss anything with FEZtool when you're exploring geology on
+            the go!
           </p>
           <div class="flex items-center space-x-2">
             <input
@@ -69,14 +129,14 @@
               placeholder="Enter your email"
             />
             <button
-              class="bg-blue-gradient px-4 py-4 sm:py-3 rounded-md text-white hover:shadow-md transition duration-300"
+              class="bg-[#72B01D] px-4 py-4 sm:py-3 rounded-md text-white hover:shadow-md transition duration-300"
             >
               <ArrowRightIcon class="text-base" />
             </button>
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
     <div
       class="py-8 sm:py-4 text-center text-sm text-[#666666] hover:text-gray-900"
     >
@@ -86,4 +146,10 @@
 </template>
 <script lang="ts" setup>
 import ArrowRightIcon from "~icons/material-symbols-light/arrow-forward-ios-rounded";
+import LinkedinIcon from "~icons/akar-icons/linkedin-box-fill";
+import InstagramIcon from "~icons/akar-icons/instagram-fill";
+import TelegramIcon from "~icons/akar-icons/telegram-fill";
+
+import GithubIcon from "~icons/mdi/github";
+import ResearchGateIcon from "~icons/simple-icons/researchgate";
 </script>
