@@ -36,11 +36,13 @@
               <ToolsChip class="mr-2 mt-2"> Snow Coverage </ToolsChip>
             </div>
             <div>
-              <base-button
-                class="px-8 xl:px-10 py-3 bg-[#72B01D] text-white font-bold"
-              >
-                Get Started - it’s Free
-              </base-button>
+              <a href="#request-demo">
+                <base-button
+                  class="px-8 xl:px-10 py-3 bg-[#72B01D] text-white font-bold"
+                >
+                  Request demo
+                </base-button>
+              </a>
             </div>
           </div>
         </div>

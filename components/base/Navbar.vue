@@ -33,11 +33,11 @@
             active-class="text-white border-b border-b-white"
             >Introduction</NuxtLink
           >
-          <NuxtLink title="Tools" url="#">Tools</NuxtLink>
-          <NuxtLink title="Documentation" url="#">Documentation</NuxtLink>
-          <NuxtLink title="Our Team" url="#">Our Team</NuxtLink>
-          <NuxtLink title="Contact Us" url="#">Contact Us</NuxtLink>
-          <NuxtLink title="Collabs" url="#">Collabs</NuxtLink>
+          <a title="Tools" href="#remote-sensing">Tools</a>
+          <a title="Documentation" href="#documentation">Documentation</a>
+          <a title="Our Team" href="#our-team">Our Team</a>
+          <a title="Contact Us" href="#contact-us">Contact Us</a>
+          <a title="Collabs" href="#collabration">Collabs</a>
           <!-- <li class="relative group">
             <button
               class="md:px-4 py-2 text-sm bg-transparent rounded-lg text-[#666666] hover:text-gray-900 focus:outline-none focus:shadow-outline flex items-center"
