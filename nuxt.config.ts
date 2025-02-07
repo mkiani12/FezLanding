@@ -13,6 +13,10 @@ export default defineNuxtConfig({
   },
   css: ["~/assets/css/main.css"],
 
+  devServer:{
+    port:3035
+  },
+
   modules: [
     "@nuxtjs/tailwindcss",
     "unplugin-icons/nuxt",
