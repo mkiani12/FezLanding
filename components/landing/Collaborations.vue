@@ -5,7 +5,7 @@
         <h1 class="lg:text-5xl text-3xl font-bold mb-8 uppercase">
           Collaborations
         </h1>
-        <div class="lg:grid lg:grid-cols-10 gap-x-16 py-10">
+        <div class="lg:grid lg:grid-cols-6 gap-x-16 py-10">
           <div
             class="lg:col-span-2 text-center mb-5 lg:mb-0 flex flex-col justify-center"
           >
@@ -32,7 +32,7 @@
             />
             <div>Kharazmi Univercity</div>
           </div>
-          <div
+          <!-- <div
             class="lg:col-span-2 text-center mb-5 lg:mb-0 flex flex-col justify-center"
           >
             <img
@@ -47,7 +47,7 @@
           >
             <img class="max-h-28 mb-4" :src="SafaSVG" alt="Azad Univercity" />
             <div>Safa Mine I.T. Co.</div>
-          </div>
+          </div> -->
         </div>
       </div>
     </BaseSection>
@@ -55,11 +55,11 @@
 </template>
 
 <script setup lang="ts">
-import SafaSVG from "~/assets/img/collabs/Safa.svg";
 import AzadSVG from "~/assets/img/collabs/Azad.svg";
 import ShamsipourSVG from "~/assets/img/collabs/Shamsipour.svg";
 import KharazmiSVG from "~/assets/img/collabs/Kharazmi.svg";
-import GeologySVG from "~/assets/img/collabs/Geology.svg";
+// import SafaSVG from "~/assets/img/collabs/Safa.svg";
+// import GeologySVG from "~/assets/img/collabs/Geology.svg";
 </script>
 
 <style scoped></style>

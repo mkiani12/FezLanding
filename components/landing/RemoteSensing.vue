@@ -28,12 +28,10 @@
               the software would operate in.
             </p>
             <div class="mb-10">
-              <ToolsChip class="mr-2 mt-2">
-                Gray Level Co-Occurrence Matrix
-              </ToolsChip>
-              <ToolsChip class="mr-2 mt-2"> Python </ToolsChip>
+              <ToolsChip class="mr-2 mt-2"> Spectral Indices </ToolsChip>
+              <ToolsChip class="mr-2 mt-2"> Vegetation </ToolsChip>
+              <ToolsChip class="mr-2 mt-2"> Land Coverage </ToolsChip>
               <ToolsChip class="mr-2 mt-2"> Remote Sensing </ToolsChip>
-              <ToolsChip class="mr-2 mt-2"> Snow Coverage </ToolsChip>
             </div>
             <div>
               <a href="#request-demo">
@@ -53,7 +51,7 @@
 
 <script setup lang="ts">
 import beforeImage from "~/assets/img/remote-sensing/RGB.jpg";
-import afterImage from "~/assets/img/remote-sensing/NDWI.jpg";
+import afterImage from "~/assets/img/remote-sensing/NDVI.jpg";
 </script>
 
 <style scoped></style>

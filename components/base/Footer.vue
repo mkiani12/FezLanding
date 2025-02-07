@@ -78,33 +78,14 @@
         >
           <ul class="space-y-4 flex flex-col">
             <div class="text-xl">Help Center</div>
-
-            <a
-              class="inline-flex items-center"
-              title="Github"
-              href="https://github.com/aradfarahani/Remote-Sensing"
-              target="_blank"
-            >
-              <GithubIcon class="mr-2" />
-              Github
+            <a class="inline-flex items-center" title="Coming soon" href="#">
+              Privacy and policy
             </a>
-            <a
-              class="inline-flex items-center"
-              title="Github"
-              href="https://github.com/aradfarahani/Remote-Sensing"
-              target="_blank"
-            >
-              <GithubIcon class="mr-2" />
-              Github
+            <a class="inline-flex items-center" title="Coming soon" href="#">
+              Support
             </a>
-            <a
-              class="inline-flex items-center"
-              title="Github"
-              href="https://github.com/aradfarahani/Remote-Sensing"
-              target="_blank"
-            >
-              <GithubIcon class="mr-2" />
-              Github
+            <a class="inline-flex items-center" title="Coming soon" href="#">
+              Blog
             </a>
           </ul>
         </div>
@@ -126,10 +107,12 @@
             <input
               type="text"
               class="w-full px-2 py-4 sm:py-3 rounded-lg sm:rounded-md text-sm focus:outline-none border border-[#AAAAAA] placeholder-[#888]"
-              placeholder="Enter your email"
+              placeholder="Soon ..."
+              disabled
             />
             <button
-              class="bg-[#72B01D] px-4 py-4 sm:py-3 rounded-md text-white hover:shadow-md transition duration-300"
+              disabled
+              class="bg-[#666666] px-4 py-4 sm:py-3 rounded-md text-white hover:shadow-md transition duration-300"
             >
               <ArrowRightIcon class="text-base" />
             </button>

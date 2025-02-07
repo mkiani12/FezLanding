@@ -52,12 +52,12 @@
       <span class="handle-line"></span>
     </div>
     <span
-      class="absolute bottom-0 left-[25%] translate-x-[-50%] -translate-y-10 text-white mix-blend-exclusion"
+      class="absolute bottom-0 left-[25%] translate-x-[-50%] -translate-y-10 text-[#72b01d] font-bold"
     >
-      NDWI image
+      NDVI image
     </span>
     <span
-      class="absolute bottom-0 right-[25%] translate-x-[50%] -translate-y-10 text-white mix-blend-exclusion"
+      class="absolute bottom-0 right-[25%] translate-x-[50%] -translate-y-10 text-[#72b01d] font-bold"
     >
       RGB image
     </span>
