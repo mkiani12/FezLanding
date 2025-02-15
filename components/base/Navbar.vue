@@ -1,7 +1,8 @@
 <template>
   <nav
     id="navbar"
-    class="relative z-10 w-full text-neutral-800 bg-[#0D0A0B] border-b border-b-[#FFFFFF14]"
+    class="fixed top-0 z-10 w-full text-neutral-800 border-b border-b-[#FFFFFF14] backdrop-blur-lg"
+    :class="{ 'bg-[#0D0A0B]': scrollY < 500, 'bg-[#0D0A0B70]': scrollY >= 500 }"
   >
     <div
       class="flex flex-col max-w-screen-2xl px-8 mx-auto lg:items-center lg:justify-between lg:flex-row relative"
@@ -27,17 +28,19 @@
           :class="[open ? 'flex' : 'hidden lg:flex']"
           class="w-auto !mr-auto h-auto flex flex-col lg:absolute text-[#D0D0D0] lg:top-[50%] lg:left-[50%] lg:translate-x-[-50%] lg:translate-y-[-50%] lg:items-center pb-4 lg:pb-0 lg:justify-center lg:flex-row origin-top duration-300 xl:space-x-5 space-y-3 lg:space-y-0 lg:!ml-0"
         >
-          <NuxtLink
-            title="Introduction"
-            to="/"
-            active-class="text-white border-b border-b-white"
-            >Introduction</NuxtLink
+          <a
+            v-for="section in sections"
+            :key="section.id"
+            :href="'#' + section.id"
+            :title="section.name"
+            :class="{
+              'text-white border-b border-b-white':
+                activeSection === section.id,
+            }"
+            @click.prevent="scrollToSection(section.id)"
           >
-          <a title="Tools" href="#remote-sensing">Tools</a>
-          <a title="Documentation" href="#documentation">Documentation</a>
-          <a title="Our Team" href="#our-team">Our Team</a>
-          <a title="Contact Us" href="#contact-us">Contact Us</a>
-          <a title="Collabs" href="#collabration">Collabs</a>
+            {{ section.name }}
+          </a>
           <!-- <li class="relative group">
             <button
               class="md:px-4 py-2 text-sm bg-transparent rounded-lg text-[#666666] hover:text-gray-900 focus:outline-none focus:shadow-outline flex items-center"
@@ -110,5 +113,56 @@ const dropdownNavbar = ref(false);
 
 const dropdownToggler = () => {
   dropdownNavbar.value = !dropdownNavbar.value;
+};
+
+const scrollY = ref(0);
+
+const sections = ref([
+  { name: "Introduction", id: "hero" },
+  { name: "Tools", id: "remote-sensing" },
+  { name: "Documentation", id: "documentation" },
+  { name: "Our Team", id: "our-team" },
+  { name: "Contact Us", id: "contact-us" },
+  { name: "Collabs", id: "collabration" },
+]);
+
+const activeSection = ref("hero");
+
+const handleScroll = () => {
+  let scrollPosition = window.scrollY + 100; // Offset for navbar height
+
+  for (let section of sections.value) {
+    const el = document.getElementById(section.id);
+    if (
+      el &&
+      el.offsetTop <= scrollPosition &&
+      el.offsetTop + el.offsetHeight > scrollPosition
+    ) {
+      activeSection.value = section.id;
+      break;
+    }
+  }
+
+  updateScroll();
+};
+
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("scroll", handleScroll);
+});
+
+const scrollToSection = (id: string) => {
+  const el = document.getElementById(id);
+  if (el) {
+    window.scrollTo({ top: el.offsetTop - 80, behavior: "smooth" }); // Adjust for navbar height
+  }
+};
+
+// Function to update scrollY
+const updateScroll = () => {
+  scrollY.value = window.scrollY;
 };
 </script>

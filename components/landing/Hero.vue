@@ -1,5 +1,5 @@
 <template>
-  <section id="hero" class="w-full pb-24 bg-[#0D0A0B]">
+  <section id="hero" class="w-full pb-24 mt-20 bg-[#0D0A0B]">
     <BaseSection>
       <div class="col-span-12 text-white text-center py-[100px]">
         <h1 class="lg:text-5xl text-3xl font-bold mb-8 uppercase">
