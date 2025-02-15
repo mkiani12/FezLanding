@@ -6,14 +6,12 @@
         <div
           class="w-full lg:flex lg:flex-row lg:flex-wrap lg:justify-center py-10"
         >
-          <a
+          <div
             v-for="(member, index) in teamMembers"
             :key="index"
-            :href="member.link"
             class="lg:basis1/5 lg:max-w-[20%]"
             data-aos="flip-up"
             :data-aos-delay="50 * index"
-            :target="member.link.length > 2 ? '_blank' : ''"
           >
             <div class="p-4 pb-0 relative">
               <div :class="[index % 2 == 0 ? 'bg-[#72B01D]' : 'bg-[#EBEBEB]']">
@@ -28,9 +26,18 @@
                 <div class="lg:truncate hover:whitespace-normal opacity-50">
                   {{ member.position }}
                 </div>
+                <div class="">
+                  <a
+                    v-if="member.linkedIn"
+                    :href="member.linkedIn"
+                    target="_blank"
+                  >
+                    <LinkedinIcon class="mr-2" />
+                  </a>
+                </div>
               </div>
             </div>
-          </a>
+          </div>
         </div>
         <p class="mb-8">
           After about a year with the cooperation of the FEZ team, the first
@@ -48,6 +55,8 @@
 </template>
 
 <script setup lang="ts">
+import LinkedinIcon from "~icons/akar-icons/linkedin-box-fill";
+
 import AradImage from "~/assets/img/team/arad-farahani.png";
 import MohammadImage from "~/assets/img/team/mohammad-kiani.png";
 import MahdiImage from "~/assets/img/team/mahdi-nedaei.png";
@@ -61,57 +70,58 @@ interface TeamMember {
   name: string;
   position: string;
   imageUrl: string;
-  link: string;
+  linkedIn?: string;
+  github?: string;
 }
 
 const teamMembers = ref<TeamMember[]>([
   {
     name: "Arad Farahani",
-    position: "Founder, Researcher, Back-end developer",
+    position: "Co-founder, R&D",
     imageUrl: AradImage,
-    link: "https://www.linkedin.com/in/aradfarahani/",
+    linkedIn: "https://www.linkedin.com/in/aradfarahani/",
   },
   {
     name: "Mohammad Kiani",
     position: "Co-founder, Team lead, FullStack developer",
     imageUrl: MohammadImage,
-    link: "https://www.linkedin.com/in/mohmmdkiani/",
+    linkedIn: "https://www.linkedin.com/in/mohmmdkiani/",
   },
   {
     name: "Mahdi Nedaei",
     position: "Back-end developer",
     imageUrl: MahdiImage,
-    link: "https://www.linkedin.com/in/mahdi-nedaee-232168242/",
+    linkedIn: "https://www.linkedin.com/in/mahdi-nedaee-232168242/",
   },
   {
     name: "Hooman Mirzaei",
     position: "Back-end developer",
     imageUrl: HoomanImage,
-    link: "https://www.linkedin.com/in/hooman-mirzaee/",
+    linkedIn: "https://www.linkedin.com/in/hooman-mirzaee/",
   },
   {
     name: "Yoones Kiani",
     position: "Designer",
     imageUrl: YoonesImage,
-    link: "#",
+    linkedIn: "#",
   },
   {
     name: "Parsa Elmi",
     position: "HR manager",
     imageUrl: ParsaImage,
-    link: "https://www.linkedin.com/in/elmiparsa/",
+    linkedIn: "https://www.linkedin.com/in/elmiparsa/",
   },
   {
     name: "Erfan Karimzadeh",
     position: "Front-end developer",
     imageUrl: ErfanImage,
-    link: "https://www.linkedin.com/in/erfan-karimzadeh/",
+    linkedIn: "https://www.linkedin.com/in/erfan-karimzadeh/",
   },
   {
     name: "Mohammad Kiani",
     position: "Designer",
     imageUrl: MohammadHImage,
-    link: "https://www.linkedin.com/in/mh-kiani/",
+    linkedIn: "https://www.linkedin.com/in/mh-kiani/",
   },
   // {
   //   name: "AmirAli Abdoli",
