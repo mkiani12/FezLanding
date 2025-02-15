@@ -11,6 +11,8 @@
             :key="index"
             :href="member.link"
             class="lg:basis1/5 lg:max-w-[20%]"
+            data-aos="flip-up"
+            :data-aos-delay="50 * index"
             :target="member.link.length > 2 ? '_blank' : ''"
           >
             <div class="p-4 pb-0 relative">

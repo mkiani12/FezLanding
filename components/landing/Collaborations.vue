@@ -7,31 +7,16 @@
         </h1>
         <div class="lg:grid lg:grid-cols-6 gap-x-16 py-10">
           <div
+            v-for="(collab, index) in collabs"
+            :key="index"
             class="lg:col-span-2 text-center mb-5 lg:mb-0 flex flex-col justify-center"
+            data-aos="fade-up"
+            :data-aos-delay="50 * index"
           >
-            <img class="max-h-28 mb-4" :src="AzadSVG" alt="Azad Univercity" />
-            <div>Azad Univercity</div>
+            <img class="max-h-28 mb-4" :src="collab.svg" :alt="collab.name" />
+            <div>{{ collab.name }}</div>
           </div>
-          <div
-            class="lg:col-span-2 text-center mb-5 lg:mb-0 flex flex-col justify-center"
-          >
-            <img
-              class="max-h-28 mb-4"
-              :src="ShamsipourSVG"
-              alt="Shamsipour Univercity"
-            />
-            <div>Shamsipour Univercity</div>
-          </div>
-          <div
-            class="lg:col-span-2 text-center mb-5 lg:mb-0 flex flex-col justify-center"
-          >
-            <img
-              class="max-h-28 mb-4"
-              :src="KharazmiSVG"
-              alt="Kharazmi Univercity"
-            />
-            <div>Kharazmi Univercity</div>
-          </div>
+
           <!-- <div
             class="lg:col-span-2 text-center mb-5 lg:mb-0 flex flex-col justify-center"
           >
@@ -60,6 +45,21 @@ import ShamsipourSVG from "~/assets/img/collabs/Shamsipour.svg";
 import KharazmiSVG from "~/assets/img/collabs/Kharazmi.svg";
 // import SafaSVG from "~/assets/img/collabs/Safa.svg";
 // import GeologySVG from "~/assets/img/collabs/Geology.svg";
+
+const collabs = ref([
+  {
+    name: "Azad Univercity",
+    svg: AzadSVG,
+  },
+  {
+    name: "Shamsipour Univercity",
+    svg: ShamsipourSVG,
+  },
+  {
+    name: "Kharazmi Univercity",
+    svg: KharazmiSVG,
+  },
+]);
 </script>
 
 <style scoped></style>
